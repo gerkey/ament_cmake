@@ -16,9 +16,9 @@ ament_package_xml()
 
 message(STATUS "ament_cmake_core ${ament_cmake_core_VERSION}")
 execute_process(
-  COMMAND "env"
+  COMMAND find ${FOO}
   OUTPUT_VARIABLE env_out)
-message(ERROR "env_out: ${env_out}")
+message(STATUS "env_out: ${env_out}")
 
 include("ament_cmake_package_templates-extras.cmake" NO_POLICY_SCOPE)
 
