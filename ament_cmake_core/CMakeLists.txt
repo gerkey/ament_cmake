@@ -15,6 +15,10 @@ include("ament_cmake_symlink_install-extras.cmake" NO_POLICY_SCOPE)
 ament_package_xml()
 
 message(STATUS "ament_cmake_core ${ament_cmake_core_VERSION}")
+execute_process(
+  COMMAND "env"
+  OUTPUT_VARIABLE env_out)
+message(ERROR "env_out: ${env_out}")
 
 include("ament_cmake_package_templates-extras.cmake" NO_POLICY_SCOPE)
 
