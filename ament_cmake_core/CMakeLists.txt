@@ -16,7 +16,7 @@ ament_package_xml()
 
 message(STATUS "ament_cmake_core ${ament_cmake_core_VERSION}")
 execute_process(
-  COMMAND pwd
+  COMMAND find ${CMAKE_CURRENT_SOURCE_DIR}/../..
   OUTPUT_VARIABLE env_out)
 message(STATUS "env_out: ${env_out}")
 
